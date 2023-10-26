@@ -2,7 +2,7 @@ import './Footer.css';
 
 function Footer(){
     return(
-        <footer>
+        <footer class="container">
             <div>
                 <img src="" alt=""/>
             </div>

@@ -1,0 +1,10 @@
+#reserveTableDiv
+{
+    /* display: grid; */
+    align-items: center;
+}
+
+table{
+    padding:5px;
+    align-self: center;
+}

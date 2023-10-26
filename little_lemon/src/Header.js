@@ -1,11 +1,14 @@
 import React from "react";
 import Logo from "./img/Logo.jpg";
+import './Header.css';
+import Nav from "./Nav";
 
 function Header(){
     return(
-        <div>
+        <header>
             <img src={Logo} alt="Logo"/>
-        </div>
+            <Nav></Nav>
+        </header>
     );
 }
 

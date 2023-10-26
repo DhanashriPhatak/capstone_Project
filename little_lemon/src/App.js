@@ -1,8 +1,11 @@
 import './App.css';
 import Header from './Header';
-import Nav from './Nav';
-import Main from './Main';
+// import Nav from './Nav';
+import Main from './ReserveTable';
 import Footer from './Footer';
+import Hero from './Hero';
+
+
 
 function App() {
   return (
@@ -11,10 +14,11 @@ function App() {
     // </div>
     <>
     <Header></Header>
-    <Nav></Nav>
+    <Hero></Hero>
     <Main></Main>
     <Footer></Footer>
     </>
+    
   );
 }
 
