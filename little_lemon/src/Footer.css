@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+}
+
+footer div{
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer div img{
+    width: 50px;
+    /* height: 30%; */
+}
+
+li{
+    list-style-type: none;
+}
