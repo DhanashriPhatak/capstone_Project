@@ -9,6 +9,7 @@
     /* grid-template-columns: 60% 40%;
     grid-template-rows: 250px 250px;  */
     object-fit: contain;
+    text-align: left;
 }
 
 .grid-item{
