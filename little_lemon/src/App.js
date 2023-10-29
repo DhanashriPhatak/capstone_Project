@@ -1,47 +1,44 @@
-import './App.css';
-import Header from './Header';
-// import Nav from './Nav';
-// import ReserveTable from './ReserveTable';
-import Footer from './Footer';
-// import Hero from './Hero';
-// import { HStack, VStack } from "@chakra-ui/react";
-import { Routes, Route  } from "react-router-dom";
+import { Route,Routes} from 'react-router-dom';
+import pages from './utils/pages';
+import Layout from './Components/layout/Layout';
+import Home from './Components/Home';
+import Bookings from './Components/Bookings';
+import ConfirmedBooking from './Components/Bookings/ConfirmedBooking';
+import IndexNotFound from './Components/Home/IndexNotFound';
+import UnderConstruction from './Components/Home/UnderConstruction';
 
-import Home from './Home';
-import AboutUs from './AboutUs';
-import Menu from './Menu';
-import BookingPage from './BookingPage';
-import Order from './OrderOnline';
-import Login from './Login';
-import Nav from './Nav';
-import { HStack, VStack } from '@chakra-ui/react';
-import Hero from './Hero';
-
-function App() {
+const App = () => {
   return (
     <>
-    <div className="App">
-      <VStack>
-        <HStack>
-          <Header></Header>
-          <Nav></Nav>
-        </HStack>
-        </VStack>
-        <Hero></Hero>
+      <Layout>
         <Routes>
-        <Route exact  path="/" element={<Home />}/>
-        <Route path='about' element={<AboutUs/>} />
-        <Route path='menu' element={<Menu/>} />
-        <Route path='reserve' element={<BookingPage/>} />
-        <Route path='order' element={<Order/>} />
-        <Route path='login' element={<Login/>} />
-      </Routes>
-        <Footer></Footer>
-      
-    </div>
-      
+          <Route path={pages.get('home').path} element={<Home />} />
+          <Route
+            path={pages.get('about').path}
+            element={<UnderConstruction />}
+          />
+          <Route
+            path={pages.get('menu').path}
+            element={<UnderConstruction />}
+          />
+          <Route path={pages.get('bookings').path} element={<Bookings />} />
+          <Route
+            path={pages.get('confirmedBooking').path}
+            element={<ConfirmedBooking />}
+          />
+          <Route
+            path={pages.get('orderOnline').path}
+            element={<UnderConstruction />}
+          />
+          <Route
+            path={pages.get('login').path}
+            element={<UnderConstruction />}
+          />
+          <Route path="*" element={<IndexNotFound/>} />
+        </Routes>
+      </Layout>
     </>
   );
-}
+};
 
 export default App;
